@@ -1,0 +1,50 @@
+/**
+ * Picture Frame Styles
+ */
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

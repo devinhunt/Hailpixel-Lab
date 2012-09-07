@@ -1,0 +1,41 @@
+/**
+ * Common css for the hailpixel lab
+ */
+
+body {
+  position: relative;
+}
+
+[role="banner"] {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;  
+  color: white;
+}
+
+[role="banner"] h1 {
+  display: inline-block;
+  margin: 0 1px 0 0;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, .9);
+  font-size: 10px;
+  text-transform: uppercase;
+  
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: .6;
+  
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.btn:hover {
+  opacity: 1;
+}
