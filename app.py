@@ -27,6 +27,6 @@ def home(lab_id=None):
 
 
 if socket.gethostname() == 'web219.webfaction.com':
-  run(port = 29653, server='cherrypy')
+  run(port=29653, server='cherrypy')
 else:
   run(host='localhost', port=8000, reloader=True)

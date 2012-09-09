@@ -10,6 +10,7 @@
   /** Canvas Refs */
   var canvas = document.getElementById("mesh-canvas");
   var ctx = canvas.getContext("2d");
+  var imgData;
   
   /** Mesh storage */
   var mesh;
@@ -287,16 +288,19 @@
     }
   }
   
-  /** Kick off the experiment */
-  canvas.width = root.innerWidth;
-  canvas.height = root.innerHeight;
-    
-  var img = new Image();
-  img.onload = function(event) {
-    var imgData = getImageData(img);
+  function resetImage() {
+    canvas.width = root.innerWidth;
+    canvas.height = root.innerHeight;
+    imgData = getImageData(img);
     buildMesh(canvas.width, canvas.height, 30, 30);
     buildTriangles(imgData);
     buildSprings();
+  }
+  
+  /** Kick off the experiment */
+  var img = new Image();
+  img.onload = function(event) {
+    resetImage();
     
     (function renderLoop() {
       requestAnimFrame(renderLoop);
@@ -312,6 +316,10 @@
 
     $(window).mousemove(function(event) {
       mouse[3] = {x: event.pageX, y: event.pageY};
+    });
+    
+    $(window).resize(function(event) {
+      resetImage();
     });
   }
   img.src = "/static/1/img/box.jpg";
