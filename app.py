@@ -9,7 +9,7 @@ Love, Devin
 
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 
-TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'template')
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'views')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 
 LATEST = 1
