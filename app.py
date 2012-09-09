@@ -1,6 +1,6 @@
 import os
 import socket
-from bottle import route, run, static_file, template
+from bottle import route, run, static_file, template, TEMPLATE_PATH
 
 """
 This is the simplest, dumbest content engine ever
