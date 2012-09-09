@@ -9,14 +9,13 @@ body {
 [role="banner"] {
   position: fixed;
   left: 30px;
-  bottom: 30px;  
+  top: 30px;  
   color: white;
 }
 
-[role="banner"] h1 {
+[role="banner"] nav > h1, [role="banner"] nav > a {
   display: inline-block;
   margin: 0 1px 0 0;
-  padding: 0;
 }
 
 .btn {
@@ -33,7 +32,7 @@ body {
   opacity: .6;
   
   -webkit-transition: opacity 200ms ease-in-out;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
 }
 
 .btn:hover {

@@ -7,17 +7,21 @@ This is the simplest, dumbest content engine ever
 Love, Devin
 """
 
+LATEST = 1
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
-
 TEMPLATE_PATH.append(os.path.join(PROJECT_PATH, 'views'))
-print TEMPLATE_PATH
 
-LATEST = 1
+
+@route('/favicon.ico')
+def favicon():
+  return static_file('favicon.ico', root=STATIC_PATH)
+
 
 @route('/static/<filename:path>')
 def static(filename):
   return static_file(filename, root=STATIC_PATH)
+
 
 @route('/')
 @route('/<lab_id>')

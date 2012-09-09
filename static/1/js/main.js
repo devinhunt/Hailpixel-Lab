@@ -292,7 +292,7 @@
     canvas.width = root.innerWidth;
     canvas.height = root.innerHeight;
     imgData = getImageData(img);
-    buildMesh(canvas.width, canvas.height, 30, 30);
+    buildMesh(canvas.width, canvas.height, 25, 25);
     buildTriangles(imgData);
     buildSprings();
   }
